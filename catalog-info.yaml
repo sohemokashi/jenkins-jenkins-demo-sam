@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "jenkins-jenkins-demo-sam"
+  description: "sohel"
+  links:
+    - title: Website
+      # Change the template in the future to collect the domain name mtk8s.io
+      # parameters.properties.name(type: string,default: 'world!')
+      url: https://jenkins-jenkins-demo-sam.mtk8s.io
+  annotations:
+    argocd/app-name: "jenkins-jenkins-demo-sam"
+    sonarqube.org/project-key: "jenkins-jenkins-demo-sam"
+    jenkins.io/job-full-name: "jenkins-jenkins-demo-sam_App_Pipeline"
+    github.com/project-slug: sohemokashi/jenkins-jenkins-demo-sam
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: "jenkins-jenkins-demo-sam"
+spec:
+  type: website
+  lifecycle: experimental
+  owner: "group:default/voyagers-corp"
